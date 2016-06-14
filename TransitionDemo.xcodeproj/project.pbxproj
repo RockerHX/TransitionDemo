@@ -13,6 +13,9 @@
 		CDCB8CD71CFC17FF00F78CE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCB8CD51CFC17FF00F78CE3 /* Main.storyboard */; };
 		CDCB8CD91CFC17FF00F78CE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCB8CD81CFC17FF00F78CE3 /* Assets.xcassets */; };
 		CDCB8CDC1CFC17FF00F78CE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCB8CDA1CFC17FF00F78CE3 /* LaunchScreen.storyboard */; };
+		CDCB8CE81CFC181000F78CE3 /* HXModalOverlayAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCB8CE51CFC181000F78CE3 /* HXModalOverlayAnimationController.m */; };
+		CDCB8CE91CFC181000F78CE3 /* HXModalTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCB8CE71CFC181000F78CE3 /* HXModalTransitionDelegate.m */; };
+		CDCB8CEC1CFC1CF300F78CE3 /* HXPresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCB8CEB1CFC1CF300F78CE3 /* HXPresentedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		CDCB8CD81CFC17FF00F78CE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDCB8CDB1CFC17FF00F78CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDCB8CDD1CFC17FF00F78CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDCB8CE41CFC181000F78CE3 /* HXModalOverlayAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXModalOverlayAnimationController.h; sourceTree = "<group>"; };
+		CDCB8CE51CFC181000F78CE3 /* HXModalOverlayAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXModalOverlayAnimationController.m; sourceTree = "<group>"; };
+		CDCB8CE61CFC181000F78CE3 /* HXModalTransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXModalTransitionDelegate.h; sourceTree = "<group>"; };
+		CDCB8CE71CFC181000F78CE3 /* HXModalTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXModalTransitionDelegate.m; sourceTree = "<group>"; };
+		CDCB8CEA1CFC1CF300F78CE3 /* HXPresentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPresentedViewController.h; sourceTree = "<group>"; };
+		CDCB8CEB1CFC1CF300F78CE3 /* HXPresentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPresentedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +67,13 @@
 		CDCB8CCB1CFC17FF00F78CE3 /* TransitionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CDCB8CE31CFC181000F78CE3 /* Modal */,
 				CDCB8CCF1CFC17FF00F78CE3 /* AppDelegate.h */,
 				CDCB8CD01CFC17FF00F78CE3 /* AppDelegate.m */,
 				CDCB8CD21CFC17FF00F78CE3 /* ViewController.h */,
 				CDCB8CD31CFC17FF00F78CE3 /* ViewController.m */,
+				CDCB8CEA1CFC1CF300F78CE3 /* HXPresentedViewController.h */,
+				CDCB8CEB1CFC1CF300F78CE3 /* HXPresentedViewController.m */,
 				CDCB8CD51CFC17FF00F78CE3 /* Main.storyboard */,
 				CDCB8CD81CFC17FF00F78CE3 /* Assets.xcassets */,
 				CDCB8CDA1CFC17FF00F78CE3 /* LaunchScreen.storyboard */,
@@ -77,6 +89,17 @@
 				CDCB8CCD1CFC17FF00F78CE3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDCB8CE31CFC181000F78CE3 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB8CE61CFC181000F78CE3 /* HXModalTransitionDelegate.h */,
+				CDCB8CE71CFC181000F78CE3 /* HXModalTransitionDelegate.m */,
+				CDCB8CE41CFC181000F78CE3 /* HXModalOverlayAnimationController.h */,
+				CDCB8CE51CFC181000F78CE3 /* HXModalOverlayAnimationController.m */,
+			);
+			path = Modal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +173,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDCB8CD41CFC17FF00F78CE3 /* ViewController.m in Sources */,
+				CDCB8CEC1CFC1CF300F78CE3 /* HXPresentedViewController.m in Sources */,
+				CDCB8CE81CFC181000F78CE3 /* HXModalOverlayAnimationController.m in Sources */,
 				CDCB8CD11CFC17FF00F78CE3 /* AppDelegate.m in Sources */,
 				CDCB8CCE1CFC17FF00F78CE3 /* main.m in Sources */,
+				CDCB8CE91CFC181000F78CE3 /* HXModalTransitionDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TransitionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miamusic.TransitionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TransitionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miamusic.TransitionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

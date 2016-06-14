@@ -7,21 +7,32 @@
 //
 
 #import "ViewController.h"
+#import "HXModalTransitionDelegate.h"
+
 
 @interface ViewController ()
-
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    HXModalTransitionDelegate *_transitionDelegate;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    _transitionDelegate = [HXModalTransitionDelegate new];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma Segue Methods
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UIViewController *toViewContoller = segue.destinationViewController;
+    toViewContoller.transitioningDelegate = _transitionDelegate;
+    toViewContoller.modalPresentationStyle = UIModalPresentationCustom;
 }
 
 @end
